@@ -95,31 +95,23 @@ p {
 }
 
 .navbar {
-    background-image: url('../images/sharity@x3');
+    background-image: url('../images/sharity-3x.png');
     background-size: cover;
     background-color:#F25F5C;
     justify-content: space-between;
     width: 100%;
 }
 
-@media screen (max-width: 700px){
+@media screen and (max-width: 700px){
     .navbar {
-        background-image: url('../images/sharity@x2');
-        background-size: cover;
-        background-color:#F25F5C;
-        justify-content: space-between;
-        width: 100%;
+        background-image: url('../images/sharity-2x.png');
     }
 }
 
 
-@media screen (max-width: 300px){
+@media screen and (max-width: 300px){
     .navbar {
-        background-image: url('../images/sharity');
-        background-size: cover;
-        background-color:#F25F5C;
-        justify-content: space-between;
-        width: 100%;
+        background-image: url('../images/sharity.png');
     }
 }
 
