@@ -68,7 +68,7 @@ class VendorSignUp extends React.Component {
 		return (
         	<div className="container">
 				<div className="row">
-					<div className="card-header bg-primary text-white">
+					<div className="col-md-6 mt-5 mx-auto">
 						<h1>Create account</h1>
 						<form className="form-group" onSubmit={this.onSubmit}>
 							<div className="form-group row">
