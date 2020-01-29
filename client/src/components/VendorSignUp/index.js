@@ -75,9 +75,9 @@ class VendorSignUp extends React.Component {
 							<div className="form-group row">
 								<input placeholder="First Name" className="form-control col-md-6" type="text" name="firstName" value={this.state.firstName} onChange={this.onChange} />
 								<input placeholder="Last Name" className="form-control col-md-6" type="text" name="lastName" value={this.state.lastName} onChange={this.onChange} />
-								<input placeholder="Title:" className="form-control col-md-12" type="text" name="title" value={this.state.title} onChange={this.onChange} />
+								<input placeholder="Title" className="form-control col-md-12" type="text" name="title" value={this.state.title} onChange={this.onChange} />
 								<input placeholder="Email" className="form-control col-md-12" type="text" name="email" value={this.state.email} onChange={this.onChange} />
-								<input placeholder="hone Number" className="form-control col-md-12" type="text" name="phoneNumber" value={this.state.phoneNumber} onChange={this.onChange} />
+								<input placeholder="Phone Number" className="form-control col-md-12" type="text" name="phoneNumber" value={this.state.phoneNumber} onChange={this.onChange} />
 							</div>
 							<h2> Nonprofit Information</h2>
 							<div className="form-group row">

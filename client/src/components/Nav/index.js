@@ -6,14 +6,13 @@ import { Link } from "react-router-dom";
 function Nav() {
 	return (
 		<div className="sticky-top">
-			<Link className="navbar-brand" to="/">
-				<img src="./images/Sharlogotr1.png" className="logo" alt="Sharity logo"></img> {}
-      		</Link>
 			<nav className="navbar navbar-dark">
+				<Link className="navbar-brand" to="/">
+					<img src="./images/Sharlogotr1.png" className="logo" alt="Sharity logo"></img> {}
+				</Link>
 				<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span className="navbar-toggler-icon"></span>
 				</button>
-				<span>Sharity</span>
 			</nav>
 
 			<div className="collapse" id="navbarToggleExternalContent">
