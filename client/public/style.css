@@ -95,12 +95,35 @@ p {
 }
 
 .navbar {
-    background-image: url('../images/sharity-nav.png');
+    background-image: url('../images/sharity@x3');
     background-size: cover;
     background-color:#F25F5C;
     justify-content: space-between;
     width: 100%;
 }
+
+@media screen (max-width: 700px){
+    .navbar {
+        background-image: url('../images/sharity@x2');
+        background-size: cover;
+        background-color:#F25F5C;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+
+@media screen (max-width: 300px){
+    .navbar {
+        background-image: url('../images/sharity');
+        background-size: cover;
+        background-color:#F25F5C;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+
 #navbarToggleExternalContent {
     width: 100%;
 }
