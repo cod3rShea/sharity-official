@@ -1,0 +1,11 @@
+import React from "react";
+
+function ClaimBtn(props) {
+    return (
+        <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
+        {props.children}
+        </button>
+    );
+}
+
+export default ClaimBtn;

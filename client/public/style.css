@@ -1,0 +1,145 @@
+/* 
+Colors:
+
+red: #F25F5C
+white: #FFFFFF
+black: #000000
+green: #09BC8A
+blue: #3066BE
+
+fonts:
+Roboto
+Roboto Condensed
+Bebas Neue
+*/
+
+.logo {
+    height: 100px;
+    width: 100px;
+}
+
+html body {
+ font-family: 'Roboto', sans-serif;
+}
+
+a,
+button {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+    color: #F25F5C;
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+
+h2,h3 {
+    color: #3066BE;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Bebas Neue', cursive;
+}
+
+p {
+    color: #000;
+    font-size: 16px;
+}
+
+
+.btn:hover {
+    color: #fff; 
+    text-decoration: none;
+}
+
+.btn-green {
+    background-color: #09BC8A;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.btn-blue {
+    background-color: #3066BE;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.btn-green:hover {
+    background-color: #0b9a73;
+}
+
+.App-link {
+    margin-right: 10px;
+}
+/* Nav */
+.sticky-top {
+    background-color: #fff;
+    border-bottom: 1px solid #F25F5C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar {
+    background-image: url('../images/sharity-nav.png');
+    background-size: cover;
+    background-color:#F25F5C;
+    justify-content: unset;
+    width: 100%;
+}
+.collapse {
+    width: 100%;
+}
+.navbar span{
+    color: #fff;
+}
+
+.navbar-nav a.nav-link {
+    padding-left: 20px;
+}
+
+li.nav-item:hover {
+    background: #007bff;
+}
+
+li.nav-item a:hover {
+    color: #fff;
+}
+
+/* Home */
+
+.home .jumbotron {
+    background-color: unset;
+}
+
+a.sign-in {
+    margin: 20px 0;
+    display: block;
+}
+
+a.sign-in:hover,
+a.user-registration:hover {
+    text-decoration: none;
+}
+
+/* 
+
+@media screen and (max-width: 600px) {
+    div#navbarTogglerDemo02 {
+      display: none;
+    }
+  } */

@@ -1,1 +1,1 @@
-# sharity-official
+# Sharity
