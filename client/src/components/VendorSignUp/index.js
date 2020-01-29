@@ -70,7 +70,7 @@ class VendorSignUp extends React.Component {
 				<div className="row">
 					<div className="col-md-6 mt-5 mx-auto">
 						<h1>Create account</h1>
-						<form className="form-group" onSubmit={this.onSubmit}>
+						<form className="form-group restaurant-register" onSubmit={this.onSubmit}>
 							<h2>Contact Information</h2>
 							<div className="form-group row">
 								<input placeholder="First Name" className="form-control col-md-6" type="text" name="firstName" value={this.state.firstName} onChange={this.onChange} />

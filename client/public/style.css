@@ -143,3 +143,7 @@ a.user-registration:hover {
       display: none;
     }
   } */
+
+  form.form-group.restaurant-register input {
+    margin-bottom: 20px;
+}
