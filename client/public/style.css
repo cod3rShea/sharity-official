@@ -111,7 +111,7 @@ p {
 
 @media screen and (max-width: 400px){
     .navbar {
-        background-image: url('../images/sharity.png');
+        background-image: url('../images/sharity-1x.png');
     }
 }
 
