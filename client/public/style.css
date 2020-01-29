@@ -101,7 +101,7 @@ p {
     justify-content: unset;
     width: 100%;
 }
-.collapse {
+#navbarToggleExternalContent {
     width: 100%;
 }
 .navbar span{
