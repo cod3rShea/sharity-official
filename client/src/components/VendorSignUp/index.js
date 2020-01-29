@@ -71,33 +71,21 @@ class VendorSignUp extends React.Component {
 					<div className="card-header bg-primary text-white">
 						<h1>Create account</h1>
 						<form className="form-group" onSubmit={this.onSubmit}>
-							<h2>Contact Information</h2>
-							<div>
+							<div className="form-group row">
+								<h2>Contact Information</h2>
 								<input placeholder="First Name" className="resturant-input" type="text" name="firstName" value={this.state.firstName} onChange={this.onChange} />
-							</div>
-							<div>
 								<input placeholder="Last Name" className="resturant-input" type="text" name="lastName" value={this.state.lastName} onChange={this.onChange} />
-							</div>
-							<div>
 								<input placeholder="Title:" className="resturant-input" type="text" name="title" value={this.state.title} onChange={this.onChange} />
-							</div>
-							<div>
 								<input placeholder="Email" className="resturant-input" type="text" name="email" value={this.state.email} onChange={this.onChange} />
-							</div>
-							<div>
 								<input placeholder="hone Number" className="resturant-input" type="text" name="phoneNumber" value={this.state.phoneNumber} onChange={this.onChange} />
 							</div>
-							<h2> Nonprofit Information</h2>
-							<div>
+							<div className="form-group row">
+								<h2> Nonprofit Information</h2>
 								<input placeholder="Company Name" className="resturant-input" type="text" name="companyName" value={this.state.companyName} onChange={this.onChange} />
-							</div>
-							<div>
 								<input placeholder="Company Website" className="resturant-input" type="text" name="companyWebsite" value={this.state.companyWebsite} onChange={this.onChange} />
-							</div>
-							<div>
 								<input placeholder="EIN" className="resturant-input" type="text" name="ein" value={this.state.ein} onChange={this.onChange} />
 							</div>
-							<div>
+							<div className="form-group row">
 								<h3>Company Address:</h3>
 								<input placeholder="Company Address" className="address-input" type="text" name="companyAddress" value={this.state.companyAddress} onChange={this.onChange} />
 								<input placeholder="City" className="address-input" type="text" name="companyCity" value={this.state.companyCity} onChange={this.onChange} />
@@ -105,14 +93,14 @@ class VendorSignUp extends React.Component {
 								<input placeholder="Zip" className="address-input" type="text" name="companyZip" value={this.state.companyZip} onChange={this.onChange} />
 								<input placeholder="Country" className="address-input" type="text" name="companyCountry" value={this.state.companyCountry} onChange={this.onChange} />
 							</div>
-							<div>
+							<div className="form-group row">
 								<h3>Will any items require refigeration?</h3>
 								<select value={this.state.refigeration} onChange={this.onChange}>
 									<option value="yes">Yes</option>
 									<option value="no">No</option>
 								</select>
 							</div>
-							<div className="drop-off-section">
+							<div className="form-group row">
 								<h3>Do you have anyone on your team that can dropoff the food order?</h3>
 								<select value={this.state.dropoff} onChange={this.onChange}>
 									<option value="yes">Yes</option>
@@ -123,7 +111,7 @@ class VendorSignUp extends React.Component {
 								type="submit"
 								className="button button_wide">
 								CREATE ACCOUNT
-					</button>
+							</button>
 						</form>
 					</div>
 				</div>
