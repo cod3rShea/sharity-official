@@ -98,7 +98,7 @@ p {
     background-image: url('../images/sharity-nav.png');
     background-size: cover;
     background-color:#F25F5C;
-    justify-content: unset;
+    justify-content: space-between;
     width: 100%;
 }
 #navbarToggleExternalContent {
