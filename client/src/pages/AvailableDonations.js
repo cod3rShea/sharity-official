@@ -11,7 +11,7 @@ class AvailableDonations extends Component {
     componentDidMount() {
         axios.get('/api/inventory', {
             params: {
-                isClaimed: null
+                isClaimed: false
             }
         })
             .then(res => {
@@ -26,15 +26,16 @@ class AvailableDonations extends Component {
 
     ClaimDonation = event => {
         event.preventDefault();
-        axios.put('/api/inventory', {
+        axios.put('/api/inventory/', {
             isClaimed: true
         })
-            .then(function (response) {
-                console.log(response);
-            })
-            .catch(function (error) {
-                console.log(error);
-            });
+        .then((response) => {
+            console.log("routing to next page")
+            this.props.history.push('/available-donations')
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
     };
 
     render() {
@@ -64,11 +65,6 @@ class AvailableDonations extends Component {
                             </div>
                     ))}
                     </div>
-                </div>
-                <div>
-                    {/* <CardHolder {...this.CreateCard}></CardHolder> */}
-
-                    
                 </div>
             </div>
         )

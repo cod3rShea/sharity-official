@@ -1,9 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-
 import Landing from './pages/Landing';
 import AvailableDonations from "./pages/AvailableDonations";
 import NonprofitRegistration from "./pages/NonprofitRegistration";
@@ -34,7 +32,6 @@ function App() {
           <Route exact path="/available-donations" component={AvailableDonations}/>
           <Route exact path="/submit-donations" component={SubmitDonation}/>
           <Route exact path="/user-registration" component={UserRegistration}/>
-          {/* bad naming */}
           <Route exact path="/register-user" component={RegisterUser}/>
         </Switch>
       </div>

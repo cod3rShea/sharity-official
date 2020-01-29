@@ -2,15 +2,18 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Input, TextArea, Select, FormBtn } from "../components/DonationSubmissionForm";
 
-class donate extends Component {
-    state = {
-        foodItemDescription: "",
-        amount: "",
-        donationComments: "",
-        storageReqs: "",
-        pickUpDeadline: "",
-        dollarValue: "",
-        isClaimed: false
+class Donate extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            foodItemDescription: "",
+            amount: "",
+            donationComments: "",
+            storageReqs: "",
+            pickUpDeadline: "",
+            dollarValue: "",
+            isClaimed: false
+        }
     }
 
     handleInputChange = event => {
@@ -22,6 +25,7 @@ class donate extends Component {
 
     donateFormSubmit = event => {
         event.preventDefault();
+        console.log(this)
         axios.post('/api/inventory', {
             foodItemDescription: this.state.foodItemDescription,
             amount: this.state.amount,
@@ -32,7 +36,8 @@ class donate extends Component {
             isClaimed: false
         })
         .then((response) => {
-            this.props.history.push('/donations')
+            console.log("routing to next page")
+            this.props.history.push('/available-donations')
         })
         .catch(function (error) {
             console.log(error);
@@ -69,8 +74,15 @@ class donate extends Component {
                                 defaultValue={this.state.storageReqs}
                                 onChange={this.handleInputChange}
                                 name="storageReqs"
-                                placeholder="Storage Requirements"
-                            />
+                                placeholder="Storage Requirements">
+                                <option value="None">Storage Requirement</option>
+                                <option value="Frozen">Frozen</option>
+                                <option value="Refrigerator">Refrigerator</option>
+                                <option value="Dry">Dry</option>
+                                <option value="Canned">Canned</option>
+                                <option value="Fresh Produce">Fresh Produce</option>
+                                <option value="Prepared Food">Prepared Food</option>
+                            </Select>
                             <label>Pick Up Deadline</label>
                             <Input
                                 type="date"
@@ -109,4 +121,4 @@ class donate extends Component {
 
 };
 
-export default donate;
+export default Donate;

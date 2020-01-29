@@ -10,11 +10,11 @@ class VendorSignUp extends React.Component {
         this.state = {
             firstName: '',
             lastName: '',
-            title: '', 
+            title: '',
             email: '',
             phoneNumber: '',
             companyName: '',
-            companyWebsite: '', 
+            companyWebsite: '',
             ein: '',
             companyAddress: '',
             companyZip: '',
@@ -22,14 +22,14 @@ class VendorSignUp extends React.Component {
             companyState: '',
             companyCountry: '',
             password: '',
-            refigeration: '', 
+            refigeration: '',
             dropoff: '',
         }
 
         this.onChange = this.onChange.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
     }
-    
+
     onChange(e) {
         this.setState({ [e.target.name]: e.target.value })
     }
@@ -43,7 +43,7 @@ class VendorSignUp extends React.Component {
             email: this.state.email,
             phoneNumber: this.state.phoneNumber,
             companyName: this.state.companyName,
-            companyWebsite: this.state.companyWebsite, 
+            companyWebsite: this.state.companyWebsite,
             ein: this.state.ein,
             companyAddress: this.state.companyAddress,
             companyZip: this.state.companyZip,
@@ -51,14 +51,18 @@ class VendorSignUp extends React.Component {
             companyState: this.state.companyState,
             companyCountry: this.state.companyCountry,
             password: this.state.password,
-            refrigeration: this.state.refrigeration, 
+            refrigeration: this.state.refrigeration,
             dropoff: this.state.dropoff
         }
-            axios.post('vendors/register', resturantVendor)
-            .then(function(response) {
-                console.log(response);
+        axios.post('vendors/register', resturantVendor)
+            // .then(function(response) {
+            //     console.log(response);
+            // })
+            .then((response) => {
+                console.log("routing to next page")
+                this.props.history.push('/submit-donations')
             })
-      }
+    }
 
 
 
@@ -72,36 +76,36 @@ class VendorSignUp extends React.Component {
                         <h2>Contact Information</h2>
                         <div>
                             <label>First Name:</label>
-                            <input className="resturant-input" type="text" name="firstName" value={this.state.firstName} onChange={this.onChange}/>
+                            <input className="resturant-input" type="text" name="firstName" value={this.state.firstName} onChange={this.onChange} />
                         </div>
                         <div>
                             <label>Last Name:</label>
-                            <input className="resturant-input" type="text" name="lastName" value={this.state.lastName} onChange={this.onChange}/>
+                            <input className="resturant-input" type="text" name="lastName" value={this.state.lastName} onChange={this.onChange} />
                         </div>
                         <div>
                             <label>Title:</label>
-                            <input className="resturant-input" type="text" name="title" value={this.state.title} onChange={this.onChange}/>
+                            <input className="resturant-input" type="text" name="title" value={this.state.title} onChange={this.onChange} />
                         </div>
                         <div>
                             <label htmlFor="email">Email:</label>
-                            <input className="resturant-input" type="text" name="email" value={this.state.email} onChange={this.onChange}/>
-                        </div>    
+                            <input className="resturant-input" type="text" name="email" value={this.state.email} onChange={this.onChange} />
+                        </div>
                         <div>
                             <label htmlFor="phoneNumber">Phone Number:</label>
-                            <input className="resturant-input" type="text" name="phoneNumber" value={this.state.phoneNumber} onChange={this.onChange}/>
+                            <input className="resturant-input" type="text" name="phoneNumber" value={this.state.phoneNumber} onChange={this.onChange} />
                         </div>
                         <h3> Nonprofit Information</h3>
                         <div>
                             <label htmlFor="companyName">Company Name:</label>
-                            <input className="resturant-input" type="text" name="companyName" value={this.state.companyName} onChange={this.onChange}/>
+                            <input className="resturant-input" type="text" name="companyName" value={this.state.companyName} onChange={this.onChange} />
                         </div>
                         <div>
                             <label>Company Website:</label>
-                            <input className="resturant-input" type="text" name="companyWebsite" value={this.state.companyWebsite} onChange={this.onChange}/>
+                            <input className="resturant-input" type="text" name="companyWebsite" value={this.state.companyWebsite} onChange={this.onChange} />
                         </div>
                         <div>
                             <label>Password:</label>
-                            <input className="resturant-input" type="text" name="password" value={this.state.password} onChange={this.onChange}/>
+                            <input className="resturant-input" type="text" name="password" value={this.state.password} onChange={this.onChange} />
                         </div>
                         <div>
                             <label>EIN:</label>
@@ -109,11 +113,11 @@ class VendorSignUp extends React.Component {
                         </div>
                         <div>
                             <label>Company Address:</label>
-                            <input className="address-input" type="text" name="companyAddress" value={this.state.companyAddress} onChange={this.onChange}/>
-                            <input className="address-input" type="text" name="companyCity" value={this.state.companyCity} onChange={this.onChange}/>
-                            <input className="address-input" type="text" name="companyState" value={this.state.companyState} onChange={this.onChange}/>
-                            <input className="address-input" type="text" name="companyZip" value={this.state.companyZip} onChange={this.onChange}/>
-                            <input className="address-input" type="text" name="companyCountry" value={this.state.companyCountry} onChange={this.onChange}/>
+                            <input className="address-input" type="text" name="companyAddress" value={this.state.companyAddress} onChange={this.onChange} />
+                            <input className="address-input" type="text" name="companyCity" value={this.state.companyCity} onChange={this.onChange} />
+                            <input className="address-input" type="text" name="companyState" value={this.state.companyState} onChange={this.onChange} />
+                            <input className="address-input" type="text" name="companyZip" value={this.state.companyZip} onChange={this.onChange} />
+                            <input className="address-input" type="text" name="companyCountry" value={this.state.companyCountry} onChange={this.onChange} />
                         </div>
                         <div>
                             <label>Will any items require refigeration?</label>
@@ -122,25 +126,25 @@ class VendorSignUp extends React.Component {
                                 <option value="no">No</option>
                             </select>
                         </div>
-                        <div className ="drop-off-section">
+                        <div className="drop-off-section">
                             <label>Do you have anyone on your team that can dropoff the food order?</label>
                             <select value={this.state.dropoff} onChange={this.onChange}>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
                             </select>
                         </div>
-                        <button 
-                type="submit" 
-                className="button button_wide">
-                CREATE ACCOUNT
+                        <button
+                            type="submit"
+                            className="button button_wide">
+                            CREATE ACCOUNT
                 </button>
-                    </form>  
+                    </form>
 
-            </div> 
-        </div>
-      );
-    
+                </div>
+            </div>
+        );
+
+    }
 }
-}
-  
-  export default VendorSignUp;
+
+export default VendorSignUp;
