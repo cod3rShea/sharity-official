@@ -1,4 +1,5 @@
 import axios from 'axios'
+import jQuery from 'jquery'
 
 export const register = newUser => {
   console.log(newUser);
