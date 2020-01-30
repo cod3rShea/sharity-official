@@ -47,26 +47,14 @@ function Nav() {
 					</li>
 					<li className="nav-item">
 						<Link
-							to="/profile"
+							to="/available-donations"
 							className={
-								window.location.pathname === "/profile" || window.location.pathname === "/profile"
+								window.location.pathname === "/available-donations" || window.location.pathname === "/available-donations"
 									? "nav-link active"
 									: "nav-link"
 							}
 						>
-							Profile
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link
-              to="/available-donations"
-              className={
-                window.location.pathname === "/available-donations" || window.location.pathname === "/available-donations"
-                  ? "nav-link active"
-                  : "nav-link"
-              }
-            >
-              Donations
+							Donations
             </Link>
 					</li>
 					<li className="nav-item">
