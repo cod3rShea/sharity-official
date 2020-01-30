@@ -26,7 +26,7 @@ export const login = user => {
       return response.data
     })
     .catch(err => {
-      console.log("Your username or password was not correct");
+      console.log("Your username or password was not correct.");
       console.log(err);
       jQuery('.btn-green').css('background', 'red');
       alert("Your username or password was not correct");
