@@ -27,7 +27,7 @@ export const login = user => {
     .catch(err => {
       console.log("Your username or password was not correct.");
       console.log(err);
-      document.getElementById("error-message").innerHTML = "Your username or password was not correct.";
+      document.getElementById("error-message").innerHTML("Your username or password was not correct.)";
 
     })
 }
