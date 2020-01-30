@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function CreateAccountButton() {
     return (
         <div className="container">
             <div className="row">
                 <div className="col-md-6 mt-5 mx-auto">
-                    <a className="btn-green btn btn-lg btn-block" href="/user-registration">Create An Account</a>
+                    <Link className="btn-green btn btn-lg btn-block" to="/user-registration">Create An Account </Link>
                 </div>
             </div>
         </div>
