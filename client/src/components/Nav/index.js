@@ -20,7 +20,7 @@ function Nav() {
 					<li className="nav-item">
 						<Link
 							to="/user-registration"
-							className={window.location.pathname === "/user-registration" ? "nav-link active" : "nav-link"}
+							className={window.location.pathname === "https://sharity-official.herokuapp.com/user-registration" ? "nav-link active" : "nav-link"}
 						>
 							Register
             </Link>
