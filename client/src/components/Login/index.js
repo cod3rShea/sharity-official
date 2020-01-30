@@ -68,6 +68,7 @@ class Login extends Component {
                 Sign in
               </button>
             </form>
+            <div id="error-message"></div>
           </div>
         </div>
       </div>

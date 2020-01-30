@@ -1,6 +1,4 @@
 import axios from 'axios'
-import jQuery from 'jquery'
-
 export const register = newUser => {
   console.log(newUser);
   return axios
@@ -29,7 +27,7 @@ export const login = user => {
     .catch(err => {
       console.log("Your username or password was not correct.");
       console.log(err);
-      jQuery('.btn-green').css('background', 'red');
-      alert("Your username or password was not correct.");
+      document.getElementById("error-message").innerHTML = err.message;
+
     })
 }
