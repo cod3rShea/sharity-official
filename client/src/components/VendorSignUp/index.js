@@ -93,14 +93,14 @@ class VendorSignUp extends React.Component {
 								<input placeholder="Zip" className="form-control col-md-12" type="text" name="companyZip" value={this.state.companyZip} onChange={this.onChange} />
 								<input placeholder="Country" className="form-control col-md-12" type="text" name="companyCountry" value={this.state.companyCountry} onChange={this.onChange} />
 							</div>
-							<h3>Will any items require refigeration?</h3>
+							<h3>Will any items require refrigeration?</h3>
 							<div className="form-group row">
 								<select value={this.state.refigeration} onChange={this.onChange}>
 									<option value="yes">Yes</option>
 									<option value="no">No</option>
 								</select>
 							</div>
-							<h3>Do you have anyone on your team that can dropoff the food order?</h3>
+							<h3>Do you have anyone on your team that can drop-off the food order?</h3>
 							<div className="form-group row">
 								<select value={this.state.dropoff} onChange={this.onChange}>
 									<option value="yes">Yes</option>
